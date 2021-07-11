@@ -5,6 +5,7 @@
   "license": "UNLICENSED",
   "author": "Adam Finlayson",
   "scripts": {
+    "cdk:synth": "env-cmd cdk synth",
     "clean": "npm run cdk:clean && npm run test:clean",
     "format": "sort-package-json && eslint --fix",
     "lint": "eslint",
