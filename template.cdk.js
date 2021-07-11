@@ -1,85 +1,35 @@
 // /* eslint-disable no-new */
-// const cdk = require("@aws-cdk/core");
-// const dynamodb = require("@aws-cdk/aws-dynamodb");
-// const lambda = require("@aws-cdk/aws-lambda");
+const { cdk } = require("@knowdev/cdk");
 
-// const { version } = require("./package.json");
+class Template extends cdk.Stack {
+  constructor(scope, id, props) {
+    //
+    //
+    // Setup
+    //
 
-// const DURATION = {
-//   ONE_MINUTE: cdk.Duration.seconds(60),
-// };
-// const TAG = {
-//   ROLE: {
-//     API: "api",
-//     COMMAND: "command",
-//     META: "meta",
-//     PROCESSING: "processing",
-//     ORCHESTRATION: "orchestration",
-//     STORAGE: "storage",
-//     WEB: "web",
-//   },
-// };
+    //
+    //
+    // Stack
+    //
 
-// class Template extends cdk.Stack {
-//   constructor(scope, id, props) {
-//     //
-//     //
-//     // Setup
-//     //
+    super(scope, id, props);
 
-//     const tagger = Object.values(TAG.ROLE).reduce((accumulator, role) => {
-//       accumulator[role] = [];
-//       return accumulator;
-//     }, {});
+    //
+    //
+    // Dynamo
+    //
 
-//     //
-//     //
-//     // Stack
-//     //
+    //
+    //
+    // Lambdas
+    //
 
-//     super(scope, id, props);
-//     tagger.meta.push(this);
+    //
+    //
+    // Exports
+    //
+  } // END constructor
+} // END class
 
-//     //
-//     //
-//     // Dynamo
-//     //
-
-//     const table = new dynamodb.Table(this, "Table", {
-//       billing_mode: dynamodb.BillingMode.PAY_PER_REQUEST,
-//       partitionKey: { name: "partition", type: dynamodb.AttributeType.STRING },
-//       sortKey: { name: "sort", type: dynamodb.AttributeType.STRING },
-//     });
-//     tagger.storage.push(table);
-
-//     //
-//     //
-//     // Lambdas
-//     //
-
-//     //
-
-//     //
-//     //
-//     // Exports
-//     //
-
-//     //
-
-//     //
-//     //
-//     // Tags
-//     //
-
-//     Object.keys(tagger).forEach((role) => {
-//       tagger[role].forEach((resource) => {
-//         cdk.Tags.of(resource).add("account", process.env.PROJECT_ACCOUNT);
-//         cdk.Tags.of(resource).add("env", process.env.PROJECT_ENV);
-//         cdk.Tags.of(resource).add("project", process.env.PROJECT_KEY);
-//         cdk.Tags.of(resource).add("role", role);
-//       });
-//     });
-//   } // END constructor
-// } // END class
-
-// module.exports = Template;
+module.exports = Template;

@@ -1,13 +1,5 @@
-// require("dotenv").config();
+const Construct = require("@knowdev/cdk");
+const Template = require("./template.cdk");
+const packageJson = require("./package.json");
 
-// const cdk = require("@aws-cdk/core");
-// const Template = require("./template.cdk");
-
-// const app = new cdk.App();
-
-// // eslint-disable-next-line no-new
-// new Template(
-//   app,
-//   `cdk-${process.env.PROJECT_ENV}-${process.env.PROJECT_KEY}`,
-//   {}
-// );
+Construct.stack(Template, packageJson, {});
