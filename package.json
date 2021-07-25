@@ -16,11 +16,11 @@
     "test:coverage": "jest --coverage src/"
   },
   "dependencies": {
-    "@knowdev/cdk": "^0.1.3",
+    "@knowdev/cdk": "^0.2.4",
     "dotenv": "^10.0.0"
   },
   "devDependencies": {
-    "aws-cdk": "^1.112.0",
+    "aws-cdk": "^1.115.0",
     "cpy-cli": "^3.1.1",
     "env-cmd": "^10.1.0",
     "eslint": "^7.30.0",
