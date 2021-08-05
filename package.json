@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@knowdev/cdk": "^0.2.4",
+    "commander": "^7.2.0",
     "dotenv": "^10.0.0"
   },
   "devDependencies": {
