@@ -1,5 +1,4 @@
-// /* eslint-disable no-new */
-const { cdk } = require("@knowdev/cdk");
+const { cdk, lambda } = require("@knowdev/cdk");
 
 class Template extends cdk.Stack {
   constructor(scope, id, props) {
@@ -13,6 +12,7 @@ class Template extends cdk.Stack {
     // Stack
     //
 
+    /* eslint-disable no-unused-vars */
     super(scope, id, props);
 
     //
@@ -24,6 +24,8 @@ class Template extends cdk.Stack {
     //
     // Lambdas
     //
+
+    const statusLambda = lambda(this, "status");
 
     //
     //

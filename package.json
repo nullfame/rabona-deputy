@@ -20,6 +20,7 @@
     "test": "jest src/",
     "test:clean": "rimraf coverage/",
     "test:coverage": "jest --coverage src/",
+    "test:spec:status.handler": "jest src/handlers/__tests__/status.handler.spec.js",
     "version": "npm --prefix src --git-tag-version=false version $npm_package_version && git add src/package.json"
   },
   "dependencies": {
