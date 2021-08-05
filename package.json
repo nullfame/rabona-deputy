@@ -17,6 +17,8 @@
     "postinstall": "npm run prepare:env && npm run prepare:husky",
     "postinstall:env": "cpy .env.sample . --rename=.env",
     "postinstall:husky": "husky install",
+    "rabona": "node bin/rabona",
+    "start": "node bin/rabona",
     "test": "jest src/",
     "test:clean": "rimraf coverage/",
     "test:coverage": "jest --coverage src/",

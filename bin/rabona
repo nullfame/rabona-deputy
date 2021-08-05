@@ -1,0 +1,64 @@
+#!/usr/bin/env node
+/* eslint-disable global-require */
+
+//
+//
+// Import
+//
+
+require("dotenv").config();
+
+const { Command } = require("commander");
+
+const { version } = require("../package.json");
+
+//
+//
+// Setup
+//
+
+const program = new Command();
+program.version(version);
+
+//
+//
+// Helpers
+//
+
+async function invokeLocal(handler, event = {}) {
+  const response = await handler(event);
+  const body = JSON.parse(response.body);
+  return body;
+}
+
+//
+//
+// Commands
+//
+
+//
+// env:
+program
+  .command("env")
+  .description("print the env and exit")
+  .action(() => {
+    console.log("process.env :>> ", process.env);
+  });
+
+//
+// status:
+program
+  .command("status")
+  .description("print the status and exit")
+  .action(async () => {
+    const statusHandler = require("../src/handlers/status.handler");
+    const response = await invokeLocal(statusHandler);
+    console.log("status :>> ", JSON.stringify(response, undefined, 2));
+  });
+
+//
+//
+// Execute
+//
+
+program.parse(process.argv);
