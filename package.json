@@ -26,6 +26,7 @@
     "version": "npm --prefix src --git-tag-version=false version $npm_package_version && git add src/package.json"
   },
   "dependencies": {
+    "@hiveio/dhive": "^1.0.1",
     "@knowdev/cdk": "^0.2.4",
     "commander": "^7.2.0",
     "dotenv": "^10.0.0"
