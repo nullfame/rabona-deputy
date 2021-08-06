@@ -46,6 +46,22 @@ program
   });
 
 //
+// scout:
+program
+  .command("scout [count]")
+  .description("scout a new player")
+  .action(async (count = 1) => {
+    const event = {
+      command: {
+        count,
+      },
+    };
+    const scoutHandler = require("../src/handlers/scout.handler");
+    const response = await invokeLocal(scoutHandler, event);
+    console.log("scout :>> ", JSON.stringify(response, undefined, 2));
+  });
+
+//
 // status:
 program
   .command("status")
