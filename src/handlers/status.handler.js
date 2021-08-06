@@ -14,12 +14,13 @@
 //
 
 // eslint-disable-next-line no-unused-vars
-const handler = async (event) =>
-  // console.log("event :>> ", event);
-  ({
+const handler = async (event) => {
+  const response = { available: true };
+  return {
     statusCode: 200,
-    body: JSON.stringify({ available: true }),
-  });
+    body: JSON.stringify(response),
+  };
+};
 
 //
 //
