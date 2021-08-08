@@ -90,8 +90,9 @@ The `hygen` code templating system should be used for most new code:
 
 ### Wishlist 🌠
 
-* Distant Future
-  * Web interface
+### Distant Future 🔮
+
+* Web interface
 
 ## 📜 License
 
