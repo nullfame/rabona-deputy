@@ -27,7 +27,7 @@
     "test:spec:scout.handler": "jest ./src/handlers/__tests__/scout.handler.spec.js",
     "test:spec:status.handler": "jest src/handlers/__tests__/status.handler.spec.js",
     "test:spec:unblock.handler": "jest ./src/handlers/__tests__/unblock.handler.spec.js",
-    "version": "npm --prefix src --git-tag-version=false version $npm_package_version && git add src/package.json"
+    "version": "npm --prefix src --git-tag-version=false version $npm_package_version && git add src/package.json && git add src/package-lock.json"
   },
   "dependencies": {
     "@knowdev/cdk": "^0.2.4",
