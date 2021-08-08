@@ -84,6 +84,17 @@ program
   });
 
 //
+// unblock:
+program
+  .command("unblock")
+  .description("unblock blocked players")
+  .action(async () => {
+    const unblockHandler = require("../src/handlers/unblock.handler");
+    const response = await unblockHandler();
+    console.log("unblock :>> ", JSON.stringify(response, undefined, 2));
+  });
+
+//
 //
 // Execute
 //

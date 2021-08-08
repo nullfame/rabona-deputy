@@ -26,6 +26,7 @@
     "test:spec:blocked.handler": "jest ./src/handlers/__tests__/blocked.handler.spec.js",
     "test:spec:scout.handler": "jest ./src/handlers/__tests__/scout.handler.spec.js",
     "test:spec:status.handler": "jest src/handlers/__tests__/status.handler.spec.js",
+    "test:spec:unblock.handler": "jest ./src/handlers/__tests__/unblock.handler.spec.js",
     "version": "npm --prefix src --git-tag-version=false version $npm_package_version && git add src/package.json"
   },
   "dependencies": {
