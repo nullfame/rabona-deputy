@@ -57,6 +57,7 @@ _(`npm run` followed by command)_
 * `blocked` tells you who is blocked or injured
 * `scout` scouts a single player, returns transaction id
 * `scout [number]` scouts `${number}` players, returns all transaction ids
+* `unblock` heals and unblocks any blocked players
 
 ## 🚀 Deployment
 
@@ -81,17 +82,24 @@ The `hygen` code templating system should be used for most new code:
 
 ## 📝 Changelog
 
+* v0.3.0 - Unblock
 * v0.2.0 - Blocked
 * v0.1.0 - Scout
 
 ## 🛣 Roadmap
 
-* Unblock - unblock all or select players
-
 ### Wishlist 🌠
+
+* Unblock individual players
+* Save formations
+* Submit formations
+* Manage stadium
+* Train
+* Renew contracts
 
 ### Distant Future 🔮
 
+* AWS backend
 * Web interface
 
 ## 📜 License
