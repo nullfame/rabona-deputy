@@ -16,6 +16,7 @@ const { scout } = require("../lib/rabona");
 //
 
 const handler = async (event) => {
+  // TODO: validate event or do a default or bail
   // console.log("event :>> ", event);
   const result = { transactions: [] };
 
