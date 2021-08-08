@@ -37,6 +37,17 @@ async function invokeLocal(handler, event = {}) {
 //
 
 //
+// scout:
+program
+  .command("blocked")
+  .description("find blocked players")
+  .action(async () => {
+    const blockedHandler = require("../src/handlers/blocked.handler");
+    const response = await blockedHandler();
+    console.log("blocked :>> ", JSON.stringify(response, undefined, 2));
+  });
+
+//
 // env:
 program
   .command("env")
