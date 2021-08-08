@@ -57,7 +57,7 @@ program
       },
     };
     const scoutHandler = require("../src/handlers/scout.handler");
-    const response = await invokeLocal(scoutHandler, event);
+    const response = await scoutHandler(event);
     console.log("scout :>> ", JSON.stringify(response, undefined, 2));
   });
 
