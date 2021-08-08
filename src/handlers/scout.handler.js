@@ -29,10 +29,7 @@ const handler = async (event) => {
     await new Promise((r) => setTimeout(r, 1000));
   }
 
-  return {
-    statusCode: 200,
-    body: JSON.stringify(result),
-  };
+  return result;
 };
 
 //
