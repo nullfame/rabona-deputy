@@ -14,9 +14,10 @@
     "clean": "npm run cdk:clean && npm run test:clean",
     "format": "sort-package-json && eslint --fix",
     "lint": "eslint",
-    "postinstall": "npm run prepare:env && npm run prepare:husky",
-    "postinstall:env": "cpy .env.sample . --rename=.env",
+    "postinstall": "npm run postinstall:env && npm run postinstall:husky && npm run postinstall:src",
+    "postinstall:env": "cpy .env.sample . --rename=.env --no-overwrite",
     "postinstall:husky": "husky install",
+    "postinstall:src": "npm --prefix src install",
     "rabona": "node bin/rabona",
     "start": "node bin/rabona",
     "test": "jest src/",
@@ -27,11 +28,9 @@
     "version": "npm --prefix src --git-tag-version=false version $npm_package_version && git add src/package.json"
   },
   "dependencies": {
-    "@hiveio/dhive": "^1.0.1",
     "@knowdev/cdk": "^0.2.4",
     "commander": "^7.2.0",
-    "dotenv": "^10.0.0",
-    "nanoid": "^3.1.23"
+    "dotenv": "^10.0.0"
   },
   "devDependencies": {
     "aws-cdk": "^1.115.0",
