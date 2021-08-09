@@ -54,10 +54,10 @@ Definitions:
 
 _(`npm run` followed by command)_
 
-* `blocked` tells you who is blocked or injured
-* `scout` scouts a single player, returns transaction id
-* `scout [number]` scouts `${number}` players, returns all transaction ids
-* `unblock` heals and unblocks any blocked players
+* `rabona blocked` tells you who is blocked or injured
+* `rabona scout` scouts a single player, returns transaction id
+* `rabona scout [number]` scouts `${number}` players, returns all transaction ids
+* `rabona unblock` heals and unblocks any blocked players
 
 ## 🚀 Deployment
 
