@@ -1,3 +1,5 @@
+const { Rule, Schedule } = require("@aws-cdk/aws-events");
+const { LambdaFunction } = require("@aws-cdk/aws-events-targets");
 const { cdk, lambda } = require("@knowdev/cdk");
 
 class Template extends cdk.Stack {
@@ -31,6 +33,16 @@ class Template extends cdk.Stack {
         HIVE_POSTING_KEY: process.env.HIVE_POSTING_KEY,
       },
     });
+
+    //
+    //
+    // Scheduled Events
+    //
+
+    const unblockEventRule = new Rule(this, id, {
+      schedule: Schedule.expression("rate(3 hours)"),
+    });
+    unblockEventRule.addTarget(new LambdaFunction(unblockLambda));
 
     //
     //
