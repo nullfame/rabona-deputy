@@ -25,7 +25,12 @@ class Template extends cdk.Stack {
     // Lambdas
     //
 
-    const statusLambda = lambda(this, "status");
+    const unblockLambda = lambda(this, "unblock", {
+      environment: {
+        HIVE_USERNAME: process.env.HIVE_USERNAME,
+        HIVE_POSTING_KEY: process.env.HIVE_POSTING_KEY,
+      },
+    });
 
     //
     //
